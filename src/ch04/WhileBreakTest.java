@@ -6,16 +6,16 @@ public class WhileBreakTest {
         Scanner scan = new Scanner(System.in);
         int sum = 0, val = 0;
 
-        while(true){
+        while (true) {
             System.out.print("숫자를 입력하세요(정지:0):");
-            val =scan.nextInt();
-            if(val == 0){
+            val = scan.nextInt();
+            if (val == 0) {
                 break;
             }
             sum += val;
 
         }
-        System.out.println("합계 : " +sum);
+        System.out.println("합계 : " + sum);
 
 
     }
