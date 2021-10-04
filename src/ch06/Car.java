@@ -8,6 +8,7 @@ package ch06;
 public class Car {
     String nm;
     String brand;
+    String color;
 
     // 생성자
     // 1. 클래스명과 같다.
