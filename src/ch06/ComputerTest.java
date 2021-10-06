@@ -11,6 +11,7 @@ public class ComputerTest {
         System.out.println("Computer.brand: " + Computer.brand);
         System.out.println("c1.cpu: " + c1.cpu);
 
+        System.out.println();
         Computer c2 = new Computer();
         c2.brand = "애플";
         c2.cpu = 20;
