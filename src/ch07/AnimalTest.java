@@ -20,7 +20,7 @@ public class AnimalTest {
         // Object obj = new Animal();
 
         // BigCat bc = new Cat();
-        // Cat cat2 = Animal();
+        // Cat cat2 = new Animal();
 
         Animal cat2 = new BigCat();
         cat2.crying();

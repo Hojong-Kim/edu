@@ -13,11 +13,11 @@ public class CardDeck {
     }
 
     private void init() {
-        String[] patters = new String[] {"스페이드", "하트", "클럽", "다이아몬드"};
+        String[] patters = new String[] {"(♠ Spade)", "(♥ Heart)", "(♦ Diamond)", "(♣ Club)"};
         cards = new ArrayList();
         for (int i = 0; i < patters.length; i++) {
             for (int z = 1; z <= 13; z++) {
-                String denomination = String.valueOf(z);
+                String denomination = null;
                 switch(z) {
                     case 1:
                         denomination = "A";
@@ -32,18 +32,36 @@ public class CardDeck {
                         denomination = "K";
                         break;
                     default:
-                        denomination = String.valueOf(z);
+                        denomination = String.valueOf(z);   // 2~10은 정수를 문자열로 변경
+                        // denomination = z + "";
                 }
                 Card c = new Card(patters[i], denomination);
                 cards.add(c);
-            }
-        }
+                // cards.add(new Card(patters[i], denomination));
+            }   // for문 종료
+        }   // for문 종료
+    }
 
+    // 항상 랜덤한 카드를 준다.
+    public Card getCard() {
+        // if 콜렉션을 배열로 했다면 먼저 섞고, 순차적으로 카드를 주었을 것이다.
+        // if 콜렉션을 ArrayList로 했다면 랜덤하게 카드를 준다.
+        int rIdx = (int)(Math.random() * cards.size());
+        return cards.remove(rIdx);
+
+        // return cards.remove(int)(Math.random() * cards.size());
     }
 
     public void showAllCards() {
+        /*
         for (int i = 0; i < cards.size(); i++) {
             Card c = cards.get(i);
+            System.out.println(c);
+        }
+        */
+
+        // ForEach
+        for(Card c : cards) {
             System.out.println(c);
         }
     }

@@ -6,10 +6,10 @@ public class TelevisionTest {
         Television tv = new Television();
         RemoteControl rc = tv;
         Television tv2 = (Television) rc;
-        //rc.volumeState();    호출할 수 없다.
+        // rc.volumeState();    호출할 수 없다.
 
         tv.volumeState();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 3; i++) {
             tv.volumeUp();
         }
 
